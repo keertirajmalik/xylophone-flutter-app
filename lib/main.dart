@@ -18,75 +18,31 @@ class Xylophone extends StatelessWidget {
     player.play('note$noteNumber.wav');
   }
 
+  Expanded buildKey({Color color, int noteNumber}) {
+    return Expanded(
+      child: FlatButton(
+        onPressed: () {
+          playSound(noteNumber);
+        },
+        child: null,
+        color: color,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                playSound(1);
-              },
-              child: null,
-              color: Colors.red,
-            ),
-          ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                playSound(2);
-              },
-              child: null,
-              color: Colors.orange,
-            ),
-          ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                playSound(3);
-              },
-              child: null,
-              color: Colors.yellow,
-            ),
-          ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                playSound(4);
-              },
-              child: null,
-              color: Colors.green,
-            ),
-          ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                playSound(5);
-              },
-              child: null,
-              color: Colors.green.shade900,
-            ),
-          ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                playSound(6);
-              },
-              child: null,
-              color: Colors.blue,
-            ),
-          ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                playSound(7);
-              },
-              child: null,
-              color: Colors.purple,
-            ),
-          ),
+          buildKey(color: Colors.red, noteNumber: 1),
+          buildKey(color: Colors.orange, noteNumber: 2),
+          buildKey(color: Colors.yellow, noteNumber: 3),
+          buildKey(color: Colors.green, noteNumber: 4),
+          buildKey(color: Colors.teal, noteNumber: 5),
+          buildKey(color: Colors.blue, noteNumber: 6),
+          buildKey(color: Colors.purple, noteNumber: 7),
         ],
       ),
     );
