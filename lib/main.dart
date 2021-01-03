@@ -5,6 +5,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: Xylophone(),
       ),
     ),
@@ -21,55 +22,70 @@ class Xylophone extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          FlatButton(
-            onPressed: () {
-              playSound(1);
-            },
-            child: null,
-            color: Colors.red,
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                playSound(1);
+              },
+              child: null,
+              color: Colors.red,
+            ),
           ),
-          FlatButton(
-            onPressed: () {
-              playSound(2);
-            },
-            child: null,
-            color: Colors.orange,
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                playSound(2);
+              },
+              child: null,
+              color: Colors.orange,
+            ),
           ),
-          FlatButton(
-            onPressed: () {
-              playSound(3);
-            },
-            child: null,
-            color: Colors.yellow,
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                playSound(3);
+              },
+              child: null,
+              color: Colors.yellow,
+            ),
           ),
-          FlatButton(
-            onPressed: () {
-              playSound(4);
-            },
-            child: null,
-            color: Colors.green,
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                playSound(4);
+              },
+              child: null,
+              color: Colors.green,
+            ),
           ),
-          FlatButton(
-            onPressed: () {
-              playSound(5);
-            },
-            child: null,
-            color: Colors.green.shade900,
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                playSound(5);
+              },
+              child: null,
+              color: Colors.green.shade900,
+            ),
           ),
-          FlatButton(
-            onPressed: () {
-              playSound(6);
-            },
-            child: null,
-            color: Colors.blue,
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                playSound(6);
+              },
+              child: null,
+              color: Colors.blue,
+            ),
           ),
-          FlatButton(
-            onPressed: () {
-              playSound(7);
-            },
-            child: null,
-            color: Colors.purple,
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                playSound(7);
+              },
+              child: null,
+              color: Colors.purple,
+            ),
           ),
         ],
       ),
