@@ -12,6 +12,11 @@ void main() {
 }
 
 class Xylophone extends StatelessWidget {
+  void playSound(int noteNumber) {
+    final player = new AudioCache();
+    player.play('note$noteNumber.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,56 +24,49 @@ class Xylophone extends StatelessWidget {
         children: [
           FlatButton(
             onPressed: () {
-              final player = new AudioCache();
-              player.play('note1.wav');
+              playSound(1);
             },
             child: null,
             color: Colors.red,
           ),
           FlatButton(
             onPressed: () {
-              final player = new AudioCache();
-              player.play('note2.wav');
+              playSound(2);
             },
             child: null,
             color: Colors.orange,
           ),
           FlatButton(
             onPressed: () {
-              final player = new AudioCache();
-              player.play('note3.wav');
+              playSound(3);
             },
             child: null,
             color: Colors.yellow,
           ),
           FlatButton(
             onPressed: () {
-              final player = new AudioCache();
-              player.play('note4.wav');
+              playSound(4);
             },
             child: null,
             color: Colors.green,
           ),
           FlatButton(
             onPressed: () {
-              final player = new AudioCache();
-              player.play('note5.wav');
+              playSound(5);
             },
             child: null,
             color: Colors.green.shade900,
           ),
           FlatButton(
             onPressed: () {
-              final player = new AudioCache();
-              player.play('note6.wav');
+              playSound(6);
             },
             child: null,
             color: Colors.blue,
           ),
           FlatButton(
             onPressed: () {
-              final player = new AudioCache();
-              player.play('note7.wav');
+              playSound(7);
             },
             child: null,
             color: Colors.purple,
